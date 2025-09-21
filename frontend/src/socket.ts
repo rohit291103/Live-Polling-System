@@ -2,6 +2,6 @@
 import { io } from 'socket.io-client';
 
 // The URL of your backend server
-const URL = 'http://localhost:4000';
+const URL = 'https://live-polling-system-backend-tjix.onrender.com';
 
 export const socket = io(URL);
