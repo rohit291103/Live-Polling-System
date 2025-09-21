@@ -1,0 +1,106 @@
+/* frontend/src/components/StudentPollView.module.css */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f0f2f5;
+}
+
+.pollCard {
+  background-color: #ffffff;
+  border-radius: 16px;
+  padding: 32px;
+  width: 100%;
+  max-width: 700px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.header h2 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+}
+
+.timer {
+  font-size: 20px;
+  font-weight: 600;
+  color: #d9534f; /* A reddish color for urgency */
+}
+
+.question {
+  background-color: #343a40;
+  color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  font-size: 18px;
+  margin-bottom: 32px;
+  line-height: 1.5;
+}
+
+.optionsContainer {
+  display: grid;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.optionButton {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 16px;
+  font-size: 16px;
+  text-align: left;
+  background-color: #f8f9fa;
+  border: 2px solid #dee2e6;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.optionButton:hover {
+  border-color: #8e2de2;
+}
+
+.optionButton.selected {
+  border-color: #4a00e0;
+  background-color: #e9dffc;
+  font-weight: 600;
+}
+
+.optionLetter {
+  display: inline-block;
+  border: 1px solid #adb5bd;
+  width: 24px;
+  height: 24px;
+  line-height: 22px;
+  text-align: center;
+  border-radius: 4px;
+  margin-right: 16px;
+  font-weight: 500;
+}
+
+.submitButton {
+  width: 100%;
+  padding: 16px;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(90deg, #8e2de2, #4a00e0);
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.submitButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

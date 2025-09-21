@@ -1,0 +1,215 @@
+/* frontend/src/components/TeacherView.module.css */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  /* Match the global background color */
+  background-color: #f9f9f9; 
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+.mainContent {
+  flex-grow: 1;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 20px 120px 20px;
+  width: 100%;
+}
+
+/* ... (header, title, subtitle styles are the same) ... */
+.header {
+  display: inline-block;
+  padding: 8px 16px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #8e2de2, #4a00e0);
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 24px;
+}
+
+.title {
+  font-size: 36px;
+  font-weight: 700;
+  color: #1c1e21;
+  margin-bottom: 12px;
+}
+
+.subtitle {
+  font-size: 16px;
+  color: #606770;
+  margin-bottom: 40px;
+}
+/* ... (end of same styles) ... */
+
+.formSection {
+  margin-bottom: 32px;
+}
+
+.label {
+  display: block;
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 16px;
+}
+
+.questionContainer {
+  position: relative;
+}
+
+.textarea {
+  width: 100%;
+  min-height: 120px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  font-size: 16px;
+  resize: vertical;
+  box-sizing: border-box;
+  /* CSS Fix: Explicitly set background and text color */
+  background-color: #ffffff;
+  color: #1c1e21;
+}
+
+.charCount {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  font-size: 12px;
+  color: #aaa;
+}
+
+.timeSelector {
+  margin-top: 16px;
+}
+
+.timeSelector select {
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  background-color: white;
+  font-size: 14px;
+  color: #1c1e21;
+}
+
+.optionsList {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.optionItem {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background-color: #fff;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #eee;
+}
+
+.optionNumber {
+  background-color: #f0f0f0;
+  color: #555;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-weight: 500;
+  flex-shrink: 0;
+}
+
+.optionInput {
+  flex-grow: 1;
+  border: none;
+  background: #f7f7f7;
+  padding: 12px;
+  border-radius: 6px;
+  font-size: 16px;
+  /* CSS Fix: Explicitly set text color */
+  color: #1c1e21;
+}
+.optionInput:focus {
+  outline: 1px solid #4a00e0;
+}
+
+.correctSelector {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 14px;
+  color: #333;
+}
+
+.correctSelector label {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+}
+
+/* This targets the actual radio button circle */
+.correctSelector input[type="radio"] {
+  accent-color: #4a00e0; /* Style the radio button */
+}
+
+
+.addOptionButton {
+  margin-top: 16px;
+  padding: 10px 16px;
+  border: 1px solid #8e2de2;
+  color: #8e2de2;
+  background-color: transparent;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  border-top: 1px solid #ddd;
+  padding: 20px;
+  display: flex;
+  justify-content: flex-end;
+  box-shadow: 0 -2px 10px rgba(0,0,0,0.05);
+  box-sizing: border-box;
+}
+
+.askButton {
+  padding: 16px 40px;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(90deg, #8e2de2, #4a00e0);
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.percentageText {
+  padding-left: 10px;
+  font-weight: bold;
+  color: white;
+}
+
+/* Add this new header style */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  color: #333;
+}
+
+.timer {
+  font-size: 20px;
+  font-weight: 600;
+  color: #d9534f;
+}
